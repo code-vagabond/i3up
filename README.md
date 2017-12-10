@@ -17,3 +17,13 @@ GUI for screens management:
 ```
 sudo apt-get install arandr
 ```
+
+
+Deploy `80-monitor-hotplug.rules`in `/etc/udev/` and `monitor-hotplug.sh` into `/root/`:``
+
+```
+sudo mv 80-monitor-hotplug.rules /etc/udev/
+
+sudo mv monitor-hotplug.sh /root/
+
+```
