@@ -165,12 +165,17 @@ bar {
 # move the whole workspace to the next output
 bindsym $mod+x move workspace to output down
 
-bindsym $mod+p exec amixer -q set Master 2dB+ unmute
+
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
 bindsym XF86AudioMute exec amixer -D pulse set Master toggle
 
 exec_always xrandr --output VGA-1 --off --output LVDS-1 --primary --mode 1366x768 --pos 736x1440 --rotate normal --output HDMI-3 --off --output HDMI-2 --off --output HDMI-1 --off --output DP-3 --off --output DP-2 --mode 2560x1440 --pos 0x0 --rotate normal --output DP-1 --off
-exec "setxkbmap -layout de"
+exec_always "setxkbmap -layout de -option 'grp:alt_shift_toggle'"
+
+exec redshift
+exec xfce-display-settings
 exec code
 exec firefox
+
+bindsystem $mod+XF86Launch4 exec --no-startup-id i3exit hibernate, mode "default"
