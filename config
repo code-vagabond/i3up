@@ -178,6 +178,7 @@ exec xfce-display-settings
 exec code
 exec firefox
 exec --no-startup-id feh --bg-fill ~/Downloads/wallpaper.jpg
+exec --no-startup-id nm-applet
 
 bindsystem $mod+XF86Launch4 exec --no-startup-id i3exit hibernate, mode "default"
 
